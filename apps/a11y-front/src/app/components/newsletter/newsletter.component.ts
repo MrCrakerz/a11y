@@ -1,4 +1,4 @@
-import {Component,} from '@angular/core';
+import {Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {timer} from "rxjs";
 import {FormsModule} from "@angular/forms";
