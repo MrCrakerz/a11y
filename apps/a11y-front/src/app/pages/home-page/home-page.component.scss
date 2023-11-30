@@ -30,6 +30,7 @@
   .paragraph {
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-bottom: 5rem;
     color: rgb(37, 37, 37);
     font-size: 2rem;
     line-height: 2rem;
@@ -166,3 +167,87 @@
   }
   
 }
+.btn_grey{
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  -webkit-transition: all 0.4s;
+  background-color: transparent;
+  color: #8198ae;
+  box-shadow: none;
+  border: 1px solid #c9d9e9;
+  width: 120px;
+  margin-left: 15px;
+}
+
+.btn_blue {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  background-color: #3a9fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  color: #fff;
+  box-shadow: 0px 18px 13px -6px rgba(0, 0, 0,0.2);
+  -webkit-transition: all 0.4s;
+  width: 120px;
+}
+
+.btn_grey:hover {
+  background-color: transparent;
+  color: #1f4568;
+  box-shadow: none;
+  border: 1px solid #8198ae;
+  /* autres propriétés pour l'état de survol */
+}
+
+.btn_blue:hover {
+  box-shadow: 0px 25px 18px -6px rgba(0, 0, 0,0.2);
+  background-color: #63b2fc;
+  color: #fff;
+}
+
+.site_box {
+  margin-bottom: 5rem;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: 'Lato', sans-serif;
+  color: #1f4568;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
