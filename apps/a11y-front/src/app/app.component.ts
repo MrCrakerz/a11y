@@ -2,12 +2,12 @@ import {Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {TranslateService} from "@ngx-translate/core";
 import {en} from "./translations/en";
-import {NewsletterComponent} from "./components/newsletter/newsletter.component";
+//import {NewsletterComponent} from "./components/newsletter/newsletter.component";
 import {CookieBannerComponent} from "./components/cookie-banner/cookie-banner.component";
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NewsletterComponent, CookieBannerComponent],
+  imports: [RouterModule, CookieBannerComponent],
   selector: 'a11y-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
