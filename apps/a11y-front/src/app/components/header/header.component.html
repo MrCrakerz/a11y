@@ -1,26 +1,27 @@
-<nav>
-  <div class="container">
-    <span id="brand" (click)="goToHome()">A11y</span>
-    <button (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <ul class="navbar-menu">
-      <div class="center">
-        <li><a (click)="goToHome()">Home</a></li>
-        <li><a (click)="goToAbout()">About</a></li>
-        <li><a (click)="goToContact()">Contact</a></li>
-        <li><a (click)="goToNews()">News</a></li>
-        <li><a routerLink="/lists">Lists</a></li>
-        <div class="right">
-          <li *ngIf="!authService.isLoggedIn()"><a (click)="goToLogin()">Login</a></li>
-          <li *ngIf="!authService.isLoggedIn()"><a (click)="goToRegister()">Register</a></li>
-          <li *ngIf="authService.isLoggedIn()"><a (click)="logout()">Logout</a></li>
+<header>
+  <nav>
+    <div class="container">
+      <span id="brand" (click)="goToHome()">A11y</span>
+      <button (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  
+      <ul class="navbar-menu">
+        <div class="center">
+          <li><a (click)="goToNews()">News</a></li>
+          <li><a (click)="goToAbout()">About</a></li>
+          <li><a (click)="goToContact()">Contact</a></li>
+          <li *ngIf="authService.isLoggedIn()"><a routerLink="/lists">Lists</a></li>
+          <div class="right">
+            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToLogin()">Login</a></li>
+            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToRegister()">Register</a></li>
+            <li *ngIf="authService.isLoggedIn()"><a (click)="logout()">Logout</a></li>
+          </div>
         </div>
-      </div>
-      
-    </ul>
-  </div>
-</nav>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
