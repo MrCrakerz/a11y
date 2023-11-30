@@ -8,5 +8,37 @@ export const en = {
     button: {
       text: 'Go back'
     }
-  }
+  },
+  header: {
+    home: 'Home',
+    about: 'About',
+    contact: 'Contact',
+    register: 'Register',
+    login: 'Login',
+    news: 'News',
+    logout: 'Logout',
+    menu: 'Menu',
+    close: 'Close'
+  },
+}
+
+export const fr = {
+  aboutPage : {
+    title: 'À propos',
+    text: 'Il n’y a pas grand-chose à voir ici pour le moment. Pas sûr que vous voulez savoir qui nous sommes.',
+    button: {
+      text: 'Retourner'
+    }
+  },
+  header: {
+    home: 'Accueil',
+    about: 'À propos',
+    contact: 'Contact',
+    register: 'Inscription',
+    login: 'Connexion',
+    news: 'Actualités',
+    logout: 'Déconnexion',
+    menu: 'Menu',
+    close: 'Fermer'
+  },
 }

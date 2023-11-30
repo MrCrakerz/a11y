@@ -10,14 +10,14 @@
   
       <ul class="navbar-menu">
         <div class="center">
-          <li><a (click)="goToNews()">News</a></li>
-          <li><a (click)="goToAbout()">About</a></li>
-          <li><a (click)="goToContact()">Contact</a></li>
-          <li *ngIf="authService.isLoggedIn()"><a routerLink="/lists">Lists</a></li>
+          <li><a (click)="goToNews()">{{'header.news' | translate}}</a></li>
+          <li><a (click)="goToAbout()">{{'header.about' | translate}}</a></li>
+          <li><a (click)="goToContact()">{{'header.contact' | translate}}</a></li>
+          <li *ngIf="authService.isLoggedIn()"><a routerLink="/lists">{{'header.lists' | translate}}</a></li>
           <div class="right">
-            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToLogin()">Login</a></li>
-            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToRegister()">Register</a></li>
-            <li *ngIf="authService.isLoggedIn()"><a (click)="logout()">Logout</a></li>
+            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToLogin()">{{'header.login' | translate}}</a></li>
+            <li *ngIf="!authService.isLoggedIn()"><a (click)="goToRegister()">{{'header.register' | translate}}</a></li>
+            <li *ngIf="authService.isLoggedIn()"><a (click)="logout()">{{'header.logout' | translate}}</a></li>
           </div>
         </div>
         

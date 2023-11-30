@@ -1,15 +1,18 @@
 .section {
-
+  width: 100vw;
+  min-height: 100vh;
   &__title {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bolder;
-    color: #069b8f;
-    margin-bottom: 1cm;
+    color: #5ab1f9;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
   }
 
   &__content {
-    padding-bottom: 29mm;
+    padding-bottom: 2rem;
+    text-align: center;
   }
 
   &__left {
@@ -25,18 +28,23 @@
   }
 
   .paragraph {
-    color: aliceblue;
-    font-size: 25px;
-    line-height: 40px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: rgb(37, 37, 37);
+    font-size: 2rem;
+    line-height: 2rem;
+  
   }
 }
 
 .section--1 {
-  background-image: url("/assets/home-page-section-1-background.png");
+  background: linear-gradient(193deg, rgba(255,255,255,0) 42%, rgba(90,177,249,1) 100%);
+
+  margin-top: 1rem;
 }
 
 .section--2 {
-  background-color: coral;
+  background: linear-gradient(163deg, rgba(255,255,255,0) 42%, rgba(90,177,249,1) 100%);
 
   .section__content {
     & > * {
@@ -95,28 +103,45 @@
   }
 }
 
+.section--3 {
+  background: linear-gradient(193deg, rgba(255,255,255,0) 42%, rgba(90,177,249,1) 100%);
+  .section__content {
+    display: flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+  }
+}
+
 .testimony {
-  height: 300px;
-
+  flex: 1;
+  padding: 5rem;
+  color: rgb(37, 37, 37);
   &__image {
-    float:left;
-
     img {
-      width: 250px;
+      min-width: 190px;
+      max-width: 250px;
+      width: 50%;
       border-radius: 125px;
+      margin-bottom: 2rem;
     }
   }
 
+
   &__quote {
-    padding: 100px 100px 0 300px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 20px;
   }
 
   &__author {
-    padding: 100px 100px 0 300px;
-    text-align: right;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-style: italic;
     color: #ccc;
+    label {
+      color: #5ab1f9;
+    }
   }
 }
 
@@ -128,4 +153,16 @@
   .image__caption {
     text-align:center;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .section--3 {
+    .section__content {
+      flex-direction: column;
+    }
+  }
+  .testimony{
+    padding: 1rem;
+  }
+  
 }
