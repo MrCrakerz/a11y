@@ -1,8 +1,8 @@
 
-<h1>Register</h1>
-
+<div class ="centre">
 <div class="register-form">
   <form #registerForm="ngForm">
+
     <div class="form-row">
       <div class="label">
         <label for="email">Email: </label>
@@ -13,17 +13,33 @@
       <div class="label">
         <label for="password">Password:</label>
       </div>
-      <input type="password" [(ngModel)]="data.password" name="password" id="password" required/>
+      <input #password="ngModel" type="password" (focusin)="isPasswordFocused = true" (focusout)="isPasswordFocused = false"  [(ngModel)]="data.password" name="password" id="password" required/>
+  </div>
+  <div class="form-row">
+    <div class="label">
+      <label for="confirmPassword">Confirm Password:</label>
     </div>
-    <div class="form-row">
-      <div class="label">
-        <label for="confirmPassword">Confirm Password:</label>
-      </div>
-      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
+    <input #confirmpassword="ngModel" type="password" (focusin)="isPasswordFocused = true" (focusout)="isPasswordFocused = false" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
+  </div>
+  <div class="form-row">
+    <button (click)="reset()">Reset</button>
+    <button (click)="register()" [disabled]="registerForm['form'].invalid">Register</button>
+    @if (isPasswordFocused) {
+    <div class="message">
+      <h3>Password must contain the following:</h3>
+
+      <p id="letter" [ngClass]="checkLowerCaseRule(password.value)" >A <b>lowercase</b> letter</p>
+      <p id="capital" [ngClass]="checkUpperCaseRule(password.value)">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" [ngClass]="checkNumberRule(password.value)">A <b>number</b></p>
+      <p id="length" [ngClass]="checkLengthRule(password.value)">Minimum <b>8 characters</b></p>
+      <p id="max-length" [ngClass]="checkMaxLengthRule(password.value)">Maximum <b>12 characters</b></p>
+      <p id="special" [ngClass]="checkSpecialCharacterRule(password.value)">A <b>special</b> character</p>
+      <p [ngClass]="checkPasswordMatchRule(password.value, confirmpassword.value)">Passwords match</p>
     </div>
-    <div class="form-row">
-      <button (click)="reset()">Reset</button>
-      <button (click)="register()" [disabled]="registerForm['form'].invalid">Register</button>
-    </div>
-  </form>
+    }
+  </div>
+
+
+</form>
+</div>
 </div>

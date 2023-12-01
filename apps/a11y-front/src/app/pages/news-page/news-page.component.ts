@@ -16,3 +16,4 @@ export class NewsPageComponent {
   private readonly newsService = inject(NewsService);
   allNews$ = this.newsService.getNews() ;
 }
+

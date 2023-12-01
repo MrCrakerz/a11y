@@ -5,3 +5,10 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+.grid {
+  width: 100%;
+  height:100%;
+  display: grid;
+  grid-template-rows: 6rem 1fr 2rem;
+}

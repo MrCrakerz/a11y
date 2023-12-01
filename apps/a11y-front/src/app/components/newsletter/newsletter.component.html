@@ -13,14 +13,15 @@
         </div>
         <div class="newsletter__text">What are you waiting for ??? Sign in now !</div>
 
+
+
+        <div class="newsletter__text newsletter__text--red">And if you have any friend, sign them as well, they'll
+          love it !
+        </div>
         <div class="newsletter__form">
           <form (ngSubmit)="signIn()" #newsletterForm="ngForm"></form>
           <input class="newsletter__input" type="text" placeholder="Your email address" [(ngModel)]="email" required>
           <button class="newsletter__button" type="submit" [disabled]="newsletterForm['form'].invalid">Register!</button>
-        </div>
-
-        <div class="newsletter__text newsletter__text--red">And if you have any friend, sign them as well, they'll
-          love it !
         </div>
       </div>
     </div>

@@ -9,6 +9,8 @@ import {FooterComponent} from "../../components/footer/footer.component";
 export class RegisterModel {
   constructor(public password: string, public confirmPassword: string, public email: string) {
   }
+
+
 }
 
 @Component({
@@ -18,20 +20,65 @@ export class RegisterModel {
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.scss'],
 })
+
 export class RegisterPageComponent {
   data: RegisterModel = new RegisterModel('', '', '');
-  auth = inject(Auth)
+  isPasswordFocused = false;
+  auth = inject(Auth);
+
+  checkLowerCaseRule(password: string): 'valid' | 'invalid' {
+
+    const regex = new RegExp('[a-z]');
+    return regex.test(password) ? 'valid': 'invalid';
+  }
+  checkUpperCaseRule(password: string): 'valid' | 'invalid' {
+
+    const regexUp = new RegExp('[A-Z]');
+    return regexUp.test(password) ? 'valid': 'invalid';
+  }
+  checkNumberRule(password: string): 'valid' | 'invalid' {
+
+    const regexNum = new RegExp('[0-9]');
+    return regexNum.test(password) ? 'valid': 'invalid';
+  }
+  checkLengthRule(password: string): 'valid' | 'invalid' {
+
+
+    const regexNum = new RegExp(/^.{8,}$/);
+    return regexNum.test(password) ? 'valid': 'invalid';
+  }
+  checkMaxLengthRule(password: string): 'valid' | 'invalid' {
+
+
+    const regexNum = new RegExp(/^.{0,12}$/);
+    return regexNum.test(password) ? 'valid': 'invalid';
+  }
+
+  checkSpecialCharacterRule(password: string): 'valid' | 'invalid' {
+
+
+    const regexNum = new RegExp(/[\W_]/g);
+    return regexNum.test(password) ? 'valid': 'invalid';
+  }
+  checkPasswordMatchRule(password: string, confirmpassword : string): 'valid' | 'invalid' {
+
+    return password !== confirmpassword ? 'invalid' : 'valid';
+
+  }
+
+
 
   register() {
+
     if (this.data.password !== this.data.confirmPassword) {
       alert('Passwords do not match!');
       return;
     }
 
     if (this.data.password.length < 8) {
-      alert('Password must be at least 8 characters long!');
-      return;
-    }
+    alert('Password cannot be less than 8 characters long!');
+    return;
+  }
 
     if (this.data.password.length > 12) {
       alert('Password cannot be more than 12 characters long!');
@@ -81,4 +128,5 @@ export class RegisterPageComponent {
   reset() {
     this.data = new RegisterModel('', '', '');
   }
+
 }
