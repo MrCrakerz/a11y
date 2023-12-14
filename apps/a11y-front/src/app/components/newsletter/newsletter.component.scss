@@ -5,7 +5,7 @@
   left: 20%;
   right: 20%;
   background: aliceblue;
-  border: 3px dashed orangered;
+  border: 3px dashed #5ab1f9;
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
@@ -21,18 +21,18 @@
     top: 5px;
     right: 5px;
 
-    border: 1px solid lightgray;
+    border: 1px solid black;
     border-radius: 30px;
     width: 20px;
     height: 20px;
-    color: lightgray;
+    color: black;
     text-align:center;
   }
 
   &__title {
     font-size: 40px;
     text-align: center;
-    color: deeppink;
+    color: #90dbff;
     font-weight: bolder;
   }
 
@@ -43,9 +43,10 @@
   &__text {
     font-size: 20px;
     padding: 20px 0;
+    text-align: center;
 
     &--small {
-      font-size: 8px;
+      font-size: 15px;
     }
 
     &--red {
@@ -56,6 +57,7 @@
   &__form {
     display: flex;
     justify-content: center;
+    padding : 10px;
   }
 
 
