@@ -18,7 +18,8 @@ export const en = {
     news: 'News',
     logout: 'Logout',
     menu: 'Menu',
-    close: 'Close'
+    close: 'Close',
+    rgpd: 'GPDR'
   },
 }
 
@@ -39,6 +40,7 @@ export const fr = {
     news: 'Actualités',
     logout: 'Déconnexion',
     menu: 'Menu',
-    close: 'Fermer'
+    close: 'Fermer',
+    rgpd: 'RGPD'
   },
 }

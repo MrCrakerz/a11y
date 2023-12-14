@@ -21,7 +21,7 @@
         <div class="newsletter__form">
           <form (ngSubmit)="signIn()" #newsletterForm="ngForm"></form>
           <input class="newsletter__input" type="text" placeholder="Your email address" [(ngModel)]="email" required>
-          <button class="newsletter__button" type="submit" [disabled]="newsletterForm['form'].invalid">Register!</button>
+          <button class="newsletter__button" (click)="signIn()" type="submit" [disabled]="newsletterForm['form'].invalid">Register!</button>
         </div>
       </div>
     </div>

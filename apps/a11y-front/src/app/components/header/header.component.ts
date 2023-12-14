@@ -40,6 +40,9 @@ export class HeaderComponent {
   goToNews() {
     this.router.navigateByUrl('/news');
   }
+  goToRGPD() {
+    this.router.navigateByUrl('/rgpd');
+  }
 
   logout() {
     this.authService.logout();

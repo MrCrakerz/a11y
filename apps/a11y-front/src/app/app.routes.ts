@@ -12,6 +12,7 @@ import {
 } from "./pages/not-allowed-logged-out-page/not-allowed-logged-out-page.component";
 import {NewsPageComponent} from "./pages/news-page/news-page.component";
 import {NewsDetailsPageComponent} from "./pages/news-details-page/news-details-page.component";
+import {RgpdPageComponent} from "./pages/rgpd-page/rgpd-page.component";
 
 export const appRoutes: Route[] = [
   {
@@ -56,6 +57,10 @@ export const appRoutes: Route[] = [
   {
     path: '403-out',
     component: NotAllowedLoggedOutPageComponent,
+  },
+  {
+    path: 'rgpd',
+    component: RgpdPageComponent,
   },
   {
     path: '**',
