@@ -1,3 +1,17 @@
 .error {
   border:1px solid red;
 }
+
+section {
+  align-items: center;
+  width: 100%;
+  height:100%;
+  justify-content: center;
+  text-align: center;
+  form {
+    margin: auto;
+    padding-top: 50px;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
