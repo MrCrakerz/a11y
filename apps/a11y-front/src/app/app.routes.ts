@@ -2,14 +2,6 @@ import { Route } from '@angular/router';
 import {HomePageComponent} from "./pages/home-page/home-page.component";
 import {mustBeLoggedOutGuard} from "./services/must-be-logged-out.guard";
 import {mustBeLoggedInGuard} from "./services/must-be-logged-in.guard";
-import {ContactPageComponent} from "./pages/contact-page/contact-page.component";
-import {RegisterPageComponent} from "./pages/register-page/register-page.component";
-import {LoginPageComponent} from "./pages/login-page/login-page.component";
-import {ListsPageComponent} from "./pages/lists-page/lists-page.component";
-import {NotAllowedLoggedInPageComponent} from "./pages/not-allowed-logged-in-page/not-allowed-logged-in-page.component";
-import {
-  NotAllowedLoggedOutPageComponent
-} from "./pages/not-allowed-logged-out-page/not-allowed-logged-out-page.component";
 import {NewsPageComponent} from "./pages/news-page/news-page.component";
 import {NewsDetailsPageComponent} from "./pages/news-details-page/news-details-page.component";
 import {RgpdPageComponent} from "./pages/rgpd-page/rgpd-page.component";
@@ -25,21 +17,21 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'contact',
-    component: ContactPageComponent,
+    loadChildren: () => import('./pages/contact-page/contact.routes').then(m => m.contactRoutes)
   },
   {
     path: 'register',
-    component: RegisterPageComponent,
+    loadChildren: () => import('./pages/register-page/register.routes').then(m => m.registerRoutes),
     canActivate: [mustBeLoggedOutGuard]
   },
   {
     path: 'login',
-    component: LoginPageComponent,
+    loadChildren: () => import('./pages/login-page/login.routes').then(m => m.loginRoutes),
     canActivate: [mustBeLoggedOutGuard]
   },
   {
     path: 'lists',
-    component: ListsPageComponent,
+    loadChildren: () => import('./pages/lists-page/lists.routes').then(m => m.listsRoutes),
     canActivate: [mustBeLoggedInGuard]
   },
   {
@@ -52,11 +44,11 @@ export const appRoutes: Route[] = [
   },
   {
     path: '403-in',
-    component: NotAllowedLoggedInPageComponent,
+    loadChildren: () => import('./pages/not-allowed-logged-in-page/not-allowed-logged-in.routes').then(m => m.notAllowedLoggedInRoutes),
   },
   {
     path: '403-out',
-    component: NotAllowedLoggedOutPageComponent,
+    loadChildren: () => import('./pages/not-allowed-logged-out-page/not-allowed-logged-out.routes').then(m => m.notAllowedLoggedOutRoutes),
   },
   {
     path: 'rgpd',

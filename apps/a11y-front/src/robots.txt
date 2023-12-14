@@ -1,2 +1,9 @@
 User-agent: *
 Disallow: /
+Allow: /home
+Allow: /news
+Allow: /about
+Allow: /contact
+Allow: /login
+Allow: /register
+Allow: /index.html

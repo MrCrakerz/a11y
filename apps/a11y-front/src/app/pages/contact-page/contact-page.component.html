@@ -13,29 +13,30 @@
     <table class="no-border">
       <tr>
         <td>
-          <div class="float-left">Name: <input [(ngModel)]="data.name" name="name" required #name="ngModel" tabindex="1"
+          <div class="float-left"><label for="name">Name:</label> <input id="name" [(ngModel)]="data.name" name="name" required #name="ngModel"
                                                [ngClass]="{'error': name.invalid}"/></div>
         </td>
         <td>
-          <div>Age: <input [(ngModel)]="data.age" name="age" required pattern="[1-9][0-9]*"
-                           #age="ngModel" [ngClass]="{'error': age.invalid}" tabindex="3"/></div>
+          <div><label for="age">Age:</label> <input id="age" [(ngModel)]="data.age" name="age" required pattern="[1-9][0-9]*"
+                           #age="ngModel" [ngClass]="{'error': age.invalid}"/></div>
         </td>
       </tr>
       <tr>
         <td>
-          <div>Phone number: <input [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="\+[0-9]{11}"
-                                    #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}" tabindex="4"/></div>
+          <div><label for="phoneNumber">Phone number:</label> <input id="phoneNumber" [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="\+[0-9]{11}"
+                                    #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}"/></div>
         </td>
         <td>
-          <div class="float-left">Email <input type="email" [(ngModel)]="data.email" name="email" required
-                                               #email="ngModel" [ngClass]="{'error': email.invalid}" tabindex="2"/></div>
+          <div class="float-left"><label for="email">Email:</label> <input id="email" type="email" [(ngModel)]="data.email" name="email" required
+                                               #email="ngModel" [ngClass]="{'error': email.invalid}"/></div>
         </td>
       </tr>
 
       <tr>
         <td colspan="2">
-          <div>Message : <br/>
-            <textarea [(ngModel)]="data.message" name="message"></textarea>
+          <label for="message">Message:</label>
+          <div>
+            <textarea id="message" [(ngModel)]="data.message" name="message"></textarea>
           </div>
         </td>
       </tr>
