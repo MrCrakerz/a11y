@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #5ab1f9;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -27,8 +27,13 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
+section#last {
+  margin-bottom: 0px;
+}
+
 h2 {
   margin-top: 0;
+  color: #5ab1f9;
 }
 
 /* Ajoutez d'autres styles personnalisés ici si nécessaire */
